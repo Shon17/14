@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        c=+prompt('vvedite pervoye chislo');
+        d=+prompt('vvedite vtoroye chislo');
+        alert(one(c,d));
+        function one(x,y){
+            if(x>y){
+                return 1;
+            } else if (x<y){
+                return -1;
+            } else {return 0;}
+        }
+        function createParagraph(background_color, text_color, text) {
+            var paragraph = document.createElement("p");
+            
+            paragraph.style.backgroundColor = background_color;
+            paragraph.style.color = text_color;
+            
+            paragraph.textContent = text;
+            
+            document.body.appendChild(paragraph);
+        }
+
+        createParagraph("red", "white", "Lorem ipsum sit amet");
+
+
+        
+        function calculateRectangleArea(length, width) {
+            if (width === undefined) {
+                width = length;
+            }
+            
+            var area = length * width;
+            
+            return area;
+        } var rectangleArea = calculateRectangleArea(5, 10);
+        document.write("Площадь прямоугольника: " + rectangleArea + "<br>");
+
+
+
+        function calculateResult(number1, number2) {
+    if (number1 % 2 === 0 && number2 % 2 === 0) {
+        
+        return number1 * number2;
+    } else if (number1 % 2 !== 0 && number2 % 2 !== 0) {
+        
+        return number1 + number2;
+    } else {
+       
+        return number1 % 2 !== 0 ? number1 : number2;
+    }
+}
+
+
+document.write("YEEEE"+calculateResult(+prompt("vvedite odno chislo:"), +prompt("vvedite vtoroye")) + "<br>"); 
+
+    </script>
+</body>
+</html>

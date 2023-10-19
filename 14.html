@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(182, 201, 249); padding-left: 30px; font-family:'Trebuchet MS';
+        }
+        .task {
+            display: inline-block;
+            cursor: pointer;
+            margin: 5px;
+        }
+        
+        .solution {
+            display: none;
+            margin: 10px 0;
+        }
+        div{ background-color: white; overflow: auto; width: 200px; height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>js задачки </h1> <hr> <h3>базовый синтаксис js</h3>
+    <ul>
+        <li>идентификаторы, зарезервированные слова</li>
+        <li>тип данных js, литералы</li>
+        <li>выражения и операторы</li>
+        <li>инструкции</li>
+    </ul>
+    <div class="task" onclick="showsol(1)">
+        <h3>Один парень в компании предложил друзьям такой спор:
+
+            – Спорим, я выставлю бутылку на середину комнаты и вползу в неё.
+            
+            И получилось. Он победил.
+            
+            Как парню посчастливилось это сделать?</h3>
+    </div>
+    <div class="solution" id="sol1">
+        <p>Он без труда вполз в неё – в комнату.</p>
+    </div>
+    <div class="task" onclick="showsol(2)">
+        <h3>Представьте ряд из шести чашек на столе. Три первые из них ничем не наполнены, а три следующие – с водой. Как добиться чередования пустых чашек и чашек с водой? Касаться разрешается только одной чашки. При этом толкать чашку чашкой запрещается.
+
+            Что вы предпримете?</h3>
+    </div>
+    <div class="solution" id="sol2">
+        <p>Возьмите пятую чашку, перелейте из неё воду во вторую и поставьте чашку на место</p>
+    </div>
+    <div class="task" onclick="showsol(3)">
+        <h3>В санатории на лужайке двое мужчин заняты настольным теннисом. Один ударяет ракеткой так сильно, что теннисный шарик улетает далеко и попадает в трубу из стали. Труба зарыта в землю вертикально на три метра. Шарик лежит на дне трубы, то есть на расстоянии трёх метров от плоскости земли. У игроков нет другого шарика.
+
+            Ответьте, как спортсменам достать игральный шар без извлечения трёхметровой трубы из-под земли?</h3>
+    </div>
+    <div class="solution" id="sol3">
+        <p>Спортсмены наполнят трубу водой до краёв, и тогда шарик всплывёт.</p>
+    </div>
+    <script>
+        function showsol(taskNumber){
+            var solution = document.getElementById('sol' + taskNumber);
+            if (solution.style.display === 'none') {
+                solution.style.display = 'inline-block';
+               
+            } else {
+                solution.style.display = 'none';
+                
+            }
+        }
+    </script>
+</body>
+</html>
